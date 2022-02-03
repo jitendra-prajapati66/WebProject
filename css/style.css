@@ -220,7 +220,18 @@ a {
 ::placeholder {
   color: #cbcdd7;
 }
-
+.input-group {
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  display: flex;
+}
+.input-group .input {
+  flex-grow: 1;
+  border: 0;
+}
+.input-group .btn {
+  margin: 4px;
+}
 @media screen and (min-length: 1022px) {
   .input {
     font-size: 1.5rem;

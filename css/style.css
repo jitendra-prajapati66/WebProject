@@ -163,6 +163,7 @@ a {
   padding: 1.5rem 3rem;
   text-align: center;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 .btn--primary {
   background-color: var(--color-primary);
@@ -203,6 +204,25 @@ a {
 }
 @media screen and (min-width: 1022px) {
   .btn {
+    font-size: 1.5rem;
+  }
+}
+
+/* inputs */
+.input {
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  color: var(--color-headings);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
+}
+::placeholder {
+  color: #cbcdd7;
+}
+
+@media screen and (min-length: 1022px) {
+  .input {
     font-size: 1.5rem;
   }
 }

@@ -9,6 +9,8 @@
 html {
   font-size: 62.5%;
 }
+
+/* typology */
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
@@ -45,5 +47,29 @@ p {
   }
   h3 {
     font-size: 2.5rem;
+  }
+}
+/* Link-arrow */
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.link-arrow {
+  color: var(--color-accent);
+  font-size: 2rem;
+  font-weight: bold;
+}
+.link-arrow::after {
+  margin-left: 5px;
+  content: "-->";
+  transition: margin 0.15s;
+}
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1022px) {
+  .link-arrow {
+    font-size: 1.5rem;
   }
 }

@@ -370,3 +370,19 @@ a {
 .quote__line {
   margin-top: -10px;
 }
+
+/* grids */
+.grid {
+  display: grid;
+  gap: 5px;
+}
+@media screen and (min-width: 768px) {
+  .grid--cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1022px) {
+  .grid--cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

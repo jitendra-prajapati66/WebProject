@@ -448,6 +448,10 @@ a {
   background-color: var(--color-primary);
   color: #fff;
 }
+.callout--accent {
+  background-color: var(--color-accent);
+  color: #fff;
+}
 .callout__heading {
   color: #fff;
   margin-top: 0;
@@ -473,4 +477,40 @@ a {
   .callout .grid--cols-2 {
     grid-template-columns: 1fr auto;
   }
+}
+
+/* collapsables */
+.collapsables {
+  background-color: rgb(32, 30, 30);
+  padding: 3rem;
+}
+.collapsables__header {
+  display: flex;
+  justify-content: space-between;
+}
+.collapsables__heading {
+  color: white;
+  margin-top: 0;
+  font-weight: 600;
+}
+.collapsables__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.collapsables__content .list__item {
+  color: var(--color-body);
+  margin-bottom: 1rem;
+}
+.collapsables__chevron {
+  transform: rotate(-90deg);
+  transition: all 0.4s;
+}
+.collapsables--expanded .collapsables__chevron {
+  transform: rotate(0);
+}
+.collapsables--expanded .collapsables__content {
+  max-height: 100vh;
+  opacity: 1;
 }

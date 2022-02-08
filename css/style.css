@@ -564,7 +564,7 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 1rem;
+  padding: 0rem 1rem;
 }
 .nav__list {
   width: 100%;
@@ -585,7 +585,7 @@ a {
 .nav__toggler {
   opacity: 0.5;
   align-self: center;
-  transition: opacity 0.5s;
+  transition: all 0.5s;
 }
 .nav.collapsables--expanded .nav__toggler {
   box-shadow: 0 0 0 4px #666;

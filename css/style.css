@@ -28,10 +28,10 @@ h2,
 h3 {
   color: var(--color-headings);
   margin-bottom: 1rem;
-  line-height: 1;
 }
 h1 {
   font-size: 7rem;
+  line-height: 1;
 }
 h2 {
   font-size: 4rem;
@@ -91,15 +91,16 @@ a {
   white-space: nowrap;
 }
 .badge--primary {
-  background-color: var(--color-primary);
+  background: var(--color-primary);
   color: #fff;
 }
 .badge--secondary {
-  background-color: var(--color-secondary);
+  background: var(--color-secondary);
   color: #fff;
 }
 .badge--small {
   font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
 }
 @media screen and (min-width: 1022px) {
   .badge {
@@ -171,10 +172,16 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0;
-  padding: 1.5rem 3rem;
+  padding: 2rem 3rem;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
+}
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 .btn--primary {
   background-color: var(--color-primary);
@@ -230,19 +237,21 @@ a {
   color: var(--color-headings);
   font-size: 2rem;
   outline: 0;
-  padding: 1.5rem 3.5rem;
+  padding: 2rem 3.5rem;
 }
 ::placeholder {
   color: #cbcdd7;
 }
 .input-group {
   border: 2px solid #ccc;
-  border-radius: 30px;
+  border-radius: 40px;
   display: flex;
+  padding: 0.5rem;
 }
 .input-group .input {
   flex-grow: 1;
   border: 0;
+  padding: 1.5rem 5rem;
 }
 .input-group .btn {
   margin: 4px;
@@ -524,14 +533,13 @@ a {
 .block {
   --padding-vertical: 6rem;
   padding: var(--padding-vertical) 2rem;
-  text-align: center;
 }
 .block__heading {
   margin-top: 0;
 }
-/* .block__header {
+.block__header {
   text-align: center;
-} */
+}
 .block--dark {
   background: #000;
   color: #7b858b;
@@ -632,5 +640,33 @@ a {
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+
+/* domain block */
+.block-domain .input-group {
+  box-shadow: 5px 10px 30px 15px #e6ebee;
+  border: 0;
+  margin: 5rem auto;
+  max-width: 670px;
+}
+
+.block-domain__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.block-domain__list .list__item {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__list {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
 }

@@ -482,7 +482,7 @@ a {
 /* collapsables */
 .collapsables {
   background-color: rgb(32, 30, 30);
-  padding: 3rem;
+  padding: 2rem;
 }
 .collapsables__header {
   display: flex;
@@ -491,21 +491,21 @@ a {
 .collapsables__heading {
   color: white;
   margin-top: 0;
-  font-weight: 600;
+  font-weight: 500;
 }
 .collapsables__content {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all 0.5s;
+  transition: all 0.4s;
 }
 .collapsables__content .list__item {
   color: var(--color-body);
-  margin-bottom: 1rem;
+  margin-bottom: 1.3rem;
 }
 .collapsables__chevron {
   transform: rotate(-90deg);
-  transition: all 0.4s;
+  transition: all 0.5s;
 }
 .collapsables--expanded .collapsables__chevron {
   transform: rotate(0);
@@ -547,4 +547,53 @@ a {
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+/* navigation bar */
+.nav {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+.nav__item {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #222;
+}
+.nav__list a {
+  text-transform: capitalize;
+  color: #c2c0ca;
+  transition: color 0.4s;
+}
+.nav__list a:hover {
+  color: #fff;
+}
+.nav__toggler {
+  opacity: 0.5;
+  align-self: center;
+  transition: opacity 0.5s;
+}
+.nav.collapsables--expanded .nav__toggler {
+  box-shadow: 0 0 0 4px #666;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__toggler {
+    display: none;
+  }
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    align-items: center;
+    max-height: 100%;
+    opacity: 1;
+  }
 }

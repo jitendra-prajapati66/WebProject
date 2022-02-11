@@ -62,10 +62,10 @@ p {
 /* Link-arrow */
 a {
   text-decoration: none;
-  text-transform: uppercase;
 }
 .link-arrow {
   color: var(--color-accent);
+  text-transform: uppercase;
   font-size: 2rem;
   font-weight: bold;
 }
@@ -522,16 +522,15 @@ a {
 }
 
 /* collapsables */
-.collapsables {
+/* .collapsables {
   background-color: rgb(32, 30, 30);
   padding: 2rem;
-}
+} */
 .collapsables__header {
   display: flex;
   justify-content: space-between;
 }
 .collapsables__heading {
-  color: white;
   margin-top: 0;
   font-weight: 500;
 }
@@ -544,6 +543,10 @@ a {
 .collapsables__content .list__item {
   color: var(--color-body);
   margin-bottom: 1.3rem;
+}
+.collapsables__content .list__item:hover {
+  color: #fff;
+  transition: color 0.5s;
 }
 .collapsables__chevron {
   transform: rotate(-90deg);
@@ -748,5 +751,75 @@ a {
   .block-showcase__image > img {
     width: auto;
     max-width: 700px;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #232323;
+}
+.footer a {
+  color: #777;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+.footer__section {
+  padding: 2rem;
+  border-bottom: 1px solid #393939;
+}
+.footer__heading {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.footer__brand {
+  margin-top: 5rem;
+  text-align: center;
+}
+.footer__brand img {
+  /* TODO: Consider refactoring this and applying it to 
+  all images. */
+  width: 100%;
+  max-width: 230px;
+}
+.footer__copyright {
+  font-size: 2.1rem;
+  color: #fff;
+  opacity: 0.3;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    font-size: 1.5rem;
+  }
+  .footer__sections {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+
+  .footer .collapsables__chevron {
+    display: none;
+  }
+
+  .footer .collapsables__content {
+    opacity: 1;
+    max-height: 100%;
+  }
+
+  .footer__brand {
+    order: -1;
+    margin-top: 1rem;
+  }
+
+  .footer__copyright {
+    font-size: 1.5rem;
+  }
+
+  .footer__section {
+    border: 0;
+  }
+
+  .footer__heading {
+    font-size: 1.6rem;
   }
 }

@@ -269,7 +269,8 @@ a {
 .input-group .btn {
   margin: 4px;
 }
-@media screen and (min-length: 1022px) {
+
+@media screen and (min-width: 1022px) {
   .input {
     font-size: 1.5rem;
   }
@@ -417,7 +418,7 @@ a {
 .quote__company {
   font-style: normal;
   font-size: 2rem;
-  color-interpolation-filters: var(--color-body-darker);
+  color: var(--color-body-darker);
   opacity: 0.6;
 }
 .quote__line {
@@ -564,7 +565,7 @@ a {
 /* Blocks */
 .block {
   --padding-vertical: 6rem;
-  padding: var(--padding-vertical) 2rem;
+  padding: 6rem 2rem;
 }
 
 .block__header {

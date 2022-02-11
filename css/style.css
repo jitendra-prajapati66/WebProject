@@ -485,7 +485,7 @@ a {
 
 /* callout */
 .callout {
-  padding: 5rem;
+  padding: 4rem;
   border-radius: 6px;
 }
 .callout--primary {
@@ -504,7 +504,6 @@ a {
 .callout .btn {
   align-self: center;
   justify-self: center;
-  padding: 2rem 6rem;
 }
 .callout__content {
   text-align: center;
@@ -512,7 +511,7 @@ a {
 
 @media screen and (min-width: 768px) {
   .callout__content {
-    text-align: start;
+    text-align: left;
   }
   .callout .btn {
     justify-self: start;
@@ -761,6 +760,7 @@ a {
 /* Footer */
 .footer {
   background-color: #232323;
+  padding-top: 10rem;
 }
 .footer a {
   color: #777;
@@ -826,4 +826,9 @@ a {
   .footer__heading {
     font-size: 1.6rem;
   }
+}
+
+/* Callout signup */
+.callout-signup {
+  transform: translateY(5rem);
 }

@@ -1,1 +1,1 @@
-build beutifull website using htmland css only
+build beautyfull website using htmland css only
